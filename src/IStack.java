@@ -3,9 +3,6 @@ public interface IStack<T>{
     boolean isFull();
     T pop() throws EmptyStackException;
     void push(T elem) throws FullStackException;
-
-
-
     int size();
     T top() throws EmptyStackException;
 
