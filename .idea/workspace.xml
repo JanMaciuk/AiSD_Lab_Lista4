@@ -7,7 +7,6 @@
     <list default="true" id="cc96e4d4-e56e-4995-b1bb-56d43a7853be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ArrayStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IStack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,10 +62,22 @@
       <updated>1679660904899</updated>
       <workItem from="1679660906056" duration="4819000" />
       <workItem from="1679667179891" duration="2686000" />
+      <workItem from="1679754571007" duration="4256000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -47,16 +47,16 @@ public class ArrayStack<T> implements IStack<T> {
             throw new EmptyStackException();
         return array[topIndex-1];
     }
-    public void reverse()  {
+    public ArrayStack<T> reverse()  {
         ArrayStack<T> stack = new ArrayStack<T>(size());
+        int size = size();
         while (!isEmpty()) { // wycinam wszystkie elementy ze stosu i wklejam do nowego stosu
             try { stack.push(pop()); }
             catch (Exception e) { e.printStackTrace(); } //jest warunek !isEmpty i ten sam rozmiar, więc nie powinno dojść do błędu
         }
-        while (!stack.isEmpty()) { // zapisuje elementy z powrotem do startego stosu
-            try { push(stack.pop()); }
-            catch (Exception e) { e.printStackTrace(); } //jest warunek !isEmpty i ten sam rozmiar, więc nie powinno dojść do błędu
-        }
+        topIndex = size; // przywracam oryginalny stos do pierwotnej formy
+        return stack;
     }
+
 }
 
