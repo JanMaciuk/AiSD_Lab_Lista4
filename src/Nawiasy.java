@@ -17,18 +17,18 @@ public class Nawiasy {
                (opening == '[' && closing == ']');
     }
     public static boolean nawiasyZrownowazone(String wyrazenie) throws FullStackException, EmptyStackException {
-        ArrayStack<Character> stack = new ArrayStack<Character>();
+        ArrayStack<Character> stack = new ArrayStack<>();
         for (char ch: wyrazenie.toCharArray()) {
             switch (rodzajNawiasu(ch)) {
-                case 1 -> stack.push(ch);
-                case 0 -> { if (stack.isEmpty()||!nawiasyZgodne(stack.pop(), ch)) { return false; } }
+                case 1 -> stack.push(ch); // nawias otwierający dodaje do stosu
+                case 0 -> { if (stack.isEmpty()||!nawiasyZgodne(stack.pop(), ch)) { return false; } } // nawias zamykający, jeżeli jest niezrównoważony to zwracam false.
             }
         }
         if (!zawieraNawiasy) {
             System.out.println("Brak nawiasów w wyrażeniu");
-            return false;
+            return false;  //Zakładam, że wyrażenie bez nawiasów nie może być zrównoważone, ale zależy od definicji
         }
-    return stack.isEmpty();
+    return stack.isEmpty();  // upewniam się, że nie ma niezamkniętych nawiasów
     }
 
 }
