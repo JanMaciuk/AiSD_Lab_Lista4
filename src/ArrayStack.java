@@ -48,13 +48,14 @@ public class ArrayStack<T> implements IStack<T> {
         return array[topIndex-1];
     }
     public ArrayStack<T> reverse()  {
-        ArrayStack<T> stack = new ArrayStack<T>(size());
+        ArrayStack<T> stack = new ArrayStack<>(size());
         int size = size();
         while (!isEmpty()) { // wycinam wszystkie elementy ze stosu i wklejam do nowego stosu
             try { stack.push(pop()); }
             catch (Exception e) { e.printStackTrace(); } //jest warunek !isEmpty i ten sam rozmiar, więc nie powinno dojść do błędu
         }
         topIndex = size; // przywracam oryginalny stos do pierwotnej formy
+        //array = stack.array;  //to by było, gdybym nadpisywał oryginalny stos.
         return stack;
     }
 

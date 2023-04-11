@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Stack;
 
 public class Main { //TODO zadanie za 4 punkty, kopiowanie używając tylko zmiennych
     private static Scanner scan = new Scanner(System.in);
